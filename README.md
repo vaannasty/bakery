@@ -1,1 +1,1 @@
-echo bakery-site> README.md
+README.md
