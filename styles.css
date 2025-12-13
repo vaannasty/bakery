@@ -88,8 +88,8 @@ ul {
 /* Link */
 .link {
   color: var(--color-primary-light);
-  line-height: 1.5;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -97,6 +97,14 @@ ul {
 }
 
 /* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -120,7 +128,13 @@ ul {
 /* Hero-section */
 .hero-section {
   padding: 272px 0;
-  background-image: url("./images/hero-section-background.jpg");
+  background-image: url(./images/hero-section-background.jpg),
+    linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    );
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -287,6 +301,11 @@ ul {
     var(--color-primary-dark) 100%
   );
   border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 .formats-title {
@@ -312,22 +331,21 @@ ul {
   padding: 0;
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
+  fill: var(--color-primary-dark);
+  background-color: transparent;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.carousel-arrow {
-  fill: var(--color-primary-dark);
-}
-
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
 }
 
-.carousel-button:hover .carousel-arrow {
-  fill: var(--color-primary-light);
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 /* Contact section*/
